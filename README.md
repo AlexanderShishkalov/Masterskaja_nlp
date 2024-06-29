@@ -1,1 +1,1 @@
-This project from yandex practikum masterskaja
+This is the project from yandex practikum masterskaja

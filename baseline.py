@@ -15,13 +15,20 @@ class find_school():
         return util.semantic_search(query, corpus, top_k=2)
     
     @staticmethod
+    def augment_corpus(self, corpus: list) -> list:
+        aug_corpus = corpus
+        return aug_corpus
+
+    @staticmethod
     def clean_input(self, sentence:str) -> str:
+
         cleaned_sentence = sentence
         return cleaned_sentence
 
 
 
 corpus = [find_school.clean_input(x) for x in pd.read_csv('reference_schools.csv', index_col=0).name.values]
+corpus = find_school.augment_corpus(corpus)
 model = find_school()
 corpus = model.encode(corpus)
 query = model.clean_input(input())
